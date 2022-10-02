@@ -1,4 +1,6 @@
 .portfolio {
+  @include section;
+
   &__title {
     margin-bottom: 4px;
 
@@ -9,12 +11,6 @@
 
   &__desc {
     line-height: decimal-round(calc(30 / 16));
-  }
-
-  &__list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
   }
 
   &__item {
@@ -37,7 +33,7 @@
     border-left: 1px solid #ececec;
     border-right: 1px solid #ececec;
     border-bottom: 1px solid #ececec;
-    width: 370px;
+    // width: 370px;
     height: 111px;
   }
 
@@ -88,5 +84,49 @@
   &__link:focus &__box::before,
   &__link:focus &__text {
     transform: translateY(0);
+  }
+
+  @media screen and (max-width: 767px) {
+    &__item:not(:last-child) {
+      margin-bottom: 30px;
+    }
+    &__img {
+      width: 450px;
+      height: 294px;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    &__img {
+      width: 354px;
+      height: 294px;
+    }
+    &__underimg {
+      height: 146px;
+    }
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    &__item {
+      flex-basis: calc((100% - 30px) / 2);
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include section(94px, 94px);
+
+    &__img {
+      width: 370px;
+      height: 294px;
+    }
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
   }
 }
