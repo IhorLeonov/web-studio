@@ -1,0 +1,79 @@
+.benefits {
+  @include section;
+
+  @media screen and (max-width: 767px) {
+    &__item:not(:last-child) > &__desc {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    &__list {
+      display: flex;
+      align-items: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    &__item {
+      flex-basis: calc((100% - 30px) / 2);
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include section(94px, 94px);
+
+    &__list {
+      display: flex;
+      align-items: center;
+      align-items: flex-start;
+    }
+
+    &__item:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__item {
+    max-width: 450px;
+
+    @media screen and (min-width: 768px) {
+      width: 354px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 270px;
+    }
+  }
+
+  &__img {
+    width: 70px;
+    height: 70px;
+  }
+
+  &__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    height: 120px;
+    padding: 25px 100px;
+
+    background: #f5f4fa;
+    border-radius: 4px;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    color: var(--primery-title-color);
+    font-size: 14px;
+    line-height: decimal-round(calc(16 / 14));
+    text-transform: uppercase;
+  }
+
+  &__desc {
+    font-size: 14px;
+    line-height: decimal-round(calc(24 / 14));
+  }
+}

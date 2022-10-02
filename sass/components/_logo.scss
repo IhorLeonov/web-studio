@@ -1,0 +1,25 @@
+.logo {
+  color: var(--primery-accent-color);
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 24px;
+  line-height: decimal-round(calc(28 / 24));
+
+  &__span--dark {
+    color: #000000;
+  }
+
+  &__span--white {
+    color: var(--primery-white-color);
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: decimal-round(calc(31 / 26));
+  }
+}
+.page-header__logo {
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 25px;
+}

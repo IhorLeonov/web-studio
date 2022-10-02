@@ -1,0 +1,78 @@
+.clients {
+  @include section;
+
+  &__title {
+    margin-bottom: 30px;
+
+    color: var(--primery-title-color);
+    font-size: 28px;
+    line-height: decimal-round(calc(33 / 28));
+    text-align: center;
+  }
+
+  &__list {
+    @extend %list;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 210px;
+    height: 92px;
+    border: 1px solid var(--logo-link-color);
+    border-radius: 4px;
+    transition: border var(--main-animation);
+  }
+
+  &__icon {
+    width: 106px;
+    height: 60px;
+    fill: var(--logo-link-color);
+    transition: fill var(--main-animation);
+  }
+
+  @media screen and (min-width: 768px) {
+    &__link {
+      width: 226px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include section(94px, 94px);
+
+    &__title {
+      margin-bottom: 50px;
+
+      font-size: 36px;
+      line-height: decimal-round(calc(42 / 36));
+    }
+
+    &__list {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    &__link {
+      width: 170px;
+    }
+  }
+
+  &__link:hover,
+  &__link:focus {
+    border: 1px solid var(--primery-accent-color);
+  }
+
+  &__link:hover &__icon,
+  &__link:focus &__icon {
+    fill: var(--primery-accent-color);
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,97 @@
+.subscribe-form {
+  &__input {
+    display: block;
+    height: 50px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: decimal-round(calc(20 / 16));
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: #2f303a;
+    transition: border-color var(--main-animation);
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 28px;
+    padding-right: 28px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0.06em;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    color: var(--primery-white-color);
+    background: #2196f3;
+  }
+
+  &__btn:hover,
+  &__btn:focus,
+  &__btn:active {
+    color: var(--primery-title-color);
+    background-color: #f5f4fa;
+  }
+
+  &__icon {
+    margin-left: 10px;
+    fill: var(--primery-white-color);
+    transition: fill var(--main-animation);
+  }
+
+  &__btn:hover &__icon,
+  &__btn:focus &__icon {
+    fill: var(--primery-accent-color);
+  }
+
+  &__input:hover,
+  &__input:focus {
+    border-color: var(--primery-white-color);
+  }
+
+  @media screen and (min-width: 480px) {
+    &__input {
+      width: 450px;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    & {
+      margin-left: 93px;
+    }
+
+    &__group {
+      display: flex;
+    }
+
+    &__input {
+      display: flex;
+      width: 358px;
+      margin-right: 12px;
+      margin-bottom: 0;
+    }
+
+    &__btn {
+      margin: 0;
+      text-align: left;
+    }
+  }
+}

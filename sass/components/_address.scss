@@ -1,0 +1,48 @@
+.adress {
+  &__link {
+    @extend %link;
+    color: var(--primery-white-color);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: decimal-round(calc(24 / 14));
+    transition: color var(--main-animation);
+  }
+
+  &__link--contact {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: var(--primery-accent-color);
+  }
+
+  &__list > li {
+    margin-bottom: 8px;
+  }
+
+  &__list > li:last-child {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (max-width: 767px) {
+    &__list {
+      text-align: center;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    &__list > li {
+      margin-bottom: 9px;
+    }
+
+    &__list > li:last-child {
+      margin-bottom: 0px;
+    }
+  }
+
+  &__list {
+    @extend %list;
+  }
+}

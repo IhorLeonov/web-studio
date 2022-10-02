@@ -1,0 +1,19 @@
+body {
+  background-color: #ffffff;
+  color: #757575;
+  font-style: normal;
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0.03em;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+// .section {
+//   padding-top: 94px;
+//   padding-bottom: 94px;
+// }
+.section {
+  @include section;
+}
