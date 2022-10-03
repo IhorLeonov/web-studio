@@ -34,7 +34,7 @@
     border-right: 1px solid #ececec;
     border-bottom: 1px solid #ececec;
     // width: 370px;
-    height: 111px;
+    min-height: 111px;
   }
 
   &__box {
@@ -85,7 +85,6 @@
   &__link:focus &__text {
     transform: translateY(0);
   }
-
   @media screen and (max-width: 767px) {
     &__item:not(:last-child) {
       margin-bottom: 30px;
@@ -100,8 +99,13 @@
       width: 354px;
       height: 294px;
     }
-    &__underimg {
-      height: 146px;
+
+    &__title {
+      padding-right: 25px;
+    }
+
+    &__underimg--mb {
+      padding-bottom: 56px;
     }
 
     &__list {

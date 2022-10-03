@@ -26,13 +26,12 @@
       margin-bottom: 40px;
       flex-wrap: wrap;
     }
-    // &__item {
-    //   flex-grow: 1;
-    // }
+  }
 
-    // &__list:nth-child(4) {
-    //   flex-grow: 1;
-    // }
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    &__item:nth-child(3) {
+      margin-right: 30px;
+    }
   }
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
