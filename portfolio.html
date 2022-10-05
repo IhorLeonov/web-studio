@@ -18,12 +18,12 @@
   </head>
   <body>
     <!--Шапка-->
-    <!-- <header class="page-header"
+    <header class="page-header"
       ><div class="container page-header__container">
+        <a class="logo page-header__logo link" href="./index.html"
+          >Web<span class="logo__span--dark">Studio</span></a
+        >
         <nav class="navigation">
-          <a class="logo page-header__logo link" href="./index.html"
-            >Web<span class="logo__span--dark">Studio</span></a
-          >
           <ul class="navigation__list list">
             <li class="navigation__item"
               ><a class="navigation__link link" href="./index.html">Студія</a></li
@@ -55,9 +55,17 @@
               +38 096 111 11 11</a
             ></li
           >
-        </ul></div
-      >
-    </header> -->
+        </ul>
+        <button
+          type="button"
+          class="menu-btn js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg width="40px" height="40px">
+            <use href="./images/icons.svg#menu-open"></use></svg></button
+      ></div>
+    </header>
     <main>
       <!--Filter list-->
       <section class="portfolio">
@@ -355,5 +363,59 @@
         </form>
       </div>
     </footer>
+    <!-- Mobile menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+
+      <nav class="menu-nav">
+        <ul class="menu-nav__list list">
+          <li class="menu-nav__item"
+            ><a class="menu-nav__link link" href="./index.html">Студія</a></li
+          >
+          <li class="menu-nav__item"
+            ><a class="menu-nav__link menu-nav__link--current link" href="./portfolio.html">
+              Портфоліо</a
+            ></li
+          >
+          <li class="menu-nav__item"
+            ><a class="menu-nav__link link" href="#contacts">Контакти</a></li
+          >
+        </ul>
+      </nav>
+
+      <ul class="menu__contact list">
+        <li><a href="" class="link">+38 096 111 11 11</a></li>
+        <li><a href="" class="link">info@devstudio.com</a></li>
+      </ul>
+
+      <ul class="menu__socials list">
+        <li><a href="" class="link">Instagram</a></li>
+        <li><a href="" class="link">Twitter</a></li>
+        <li><a href="" class="link">Facebook</a></li>
+        <li><a href="" class="link">LinkedIn</a></li>
+      </ul>
+    </div>
+    <!-- Mobile menu script -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>

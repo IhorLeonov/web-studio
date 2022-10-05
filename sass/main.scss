@@ -1,5 +1,6 @@
 // utils styles
 @import './utils/variables';
+// @import './utils/normalize';
 @import './utils/visually-hidden';
 @import './utils/placeholders';
 @import './utils/mixins';
@@ -23,6 +24,7 @@
 // components styles
 @import './components/page-header';
 @import './components/logo';
+@import './components/menu';
 @import './components/btn';
 @import './components/socials';
 @import './components/footer';
