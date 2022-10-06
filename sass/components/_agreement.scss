@@ -7,7 +7,14 @@
   margin-bottom: 30px;
 
   &__desc {
-    line-height: calc(24 / 14);
+    font-size: 12px;
+    user-select: none;
+    line-height: decimal-round(calc(14 / 12));
+
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+      line-height: decimal-round(calc(24 / 14));
+    }
   }
 
   &__link {
@@ -47,10 +54,5 @@
     outline: 1px solid var(--primery-accent-color);
     outline-offset: 1px;
     border-radius: 2px;
-  }
-
-  &__desc {
-    font-size: 14px;
-    user-select: none;
   }
 }

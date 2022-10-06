@@ -4,8 +4,12 @@
   left: 50%;
   padding: 40px;
 
-  width: 528px;
-  height: 581px;
+  @media screen and (max-width: 479px) {
+    padding: 20px;
+  }
+
+  max-width: 450px;
+  max-height: 609px;
 
   background-color: var(--primery-white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -14,4 +18,9 @@
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
   transition: transform var(--main-animation);
+
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    height: 581px;
+  }
 }

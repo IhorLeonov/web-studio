@@ -13,6 +13,13 @@
 
   cursor: pointer;
 
+  transition: fill var(--main-animation);
+
+  &:hover,
+  &:focus {
+    fill: var(--primery-accent-color);
+  }
+
   @media screen and (min-width: 768px) {
     display: none;
   }
@@ -31,6 +38,8 @@
   padding-top: 48px;
   padding-left: 40px;
 
+  font-weight: 500;
+  letter-spacing: 0.02em;
   background-color: #fff;
 
   transform: translateY(-100%);
@@ -44,17 +53,26 @@
   position: absolute;
   top: 10px;
   right: 15px;
+  transition: fill var(--main-animation);
 }
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+  fill: var(--primery-accent-color);
+}
+
+// Navigations
 
 .menu-nav {
   margin-bottom: auto;
+  @media screen and (max-height: 520px) {
+    margin-bottom: 32px;
+  }
 
   &__link {
     color: var(--primery-title-color);
-    font-weight: 500;
     font-size: 40px;
     line-height: decimal-round(calc(47 / 40));
-    letter-spacing: 0.02em;
     transition: color var(--main-animation);
   }
 
@@ -72,8 +90,77 @@
   }
 }
 
-.menu__socials {
+// Contacts
+
+.menu-contact__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.menu-contact__link--numb {
+  font-size: 34px;
+  line-height: decimal-round(calc(40 / 34));
+  color: var(--primery-accent-color);
+  transition: color var(--main-animation);
+
+  &:hover,
+  &:focus {
+    color: var(--primery-text-color);
+  }
+
+  @media screen and (max-width: 419px) {
+    font-size: 30px;
+  }
+}
+
+.menu-contact__link--mail {
+  font-size: 24px;
+  line-height: decimal-round(calc(28 / 24));
+  color: var(--primery-text-color);
+  transition: color var(--main-animation);
+
+  &:hover,
+  &:focus {
+    color: var(--primery-accent-color);
+  }
+}
+
+// Socials
+
+.menu-socials__list {
   display: flex;
   margin-top: 64px;
   margin-bottom: 48px;
+}
+
+.menu-socials__item {
+  font-size: 18px;
+  line-height: decimal-round(calc(22 / 18));
+  color: var(--primery-accent-color);
+  transition: color var(--main-animation);
+
+  &:hover,
+  &:focus {
+    color: var(--primery-text-color);
+  }
+
+  &:not(:last-child)::after {
+    content: '';
+    margin-left: 10px;
+
+    width: 1px;
+    height: 100%;
+    border: 0.5px solid rgba(33, 33, 33, 0.2);
+  }
+
+  @media screen and (max-width: 419px) {
+    font-size: 11px;
+  }
+}
+
+.menu-socials__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.menu-socials__link {
+  @extend %link;
 }
