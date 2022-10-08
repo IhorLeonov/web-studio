@@ -1,6 +1,13 @@
 .footer {
   @include section;
 
+  @media screen and (max-width: 1199px) {
+    &__box {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+  }
+
   background-color: #2f303a;
 
   &__logo {
@@ -27,26 +34,13 @@
     &__title {
       text-align: center;
     }
-
-    &__socials__list {
-      margin-bottom: 60px;
-    }
   }
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     &__container {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       flex-wrap: wrap;
-    }
-
-    &__box--right {
-      margin-right: 74px;
-    }
-
-    &__box {
-      text-align: center;
-      margin-left: 61px;
     }
   }
 
