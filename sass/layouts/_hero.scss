@@ -1,18 +1,49 @@
 .hero {
-  height: 400px;
-  max-width: 480px;
   margin-left: auto;
   margin-right: auto;
-  background-color: #c4c4c4;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.5)),
-    url('../images/Heroimg.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   padding-bottom: 118px;
   padding-top: 118px;
   margin-top: 0;
   margin-bottom: 0;
+
+  height: 400px;
+  max-width: 1600px;
+
+  background-color: #c4c4c4;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  // Mobile screen
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.5)),
+    url('../images/hero/img_sm-@1x.jpg');
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.5)),
+      url('../images/hero/img_sm-@2x.jpg');
+  }
+
+  // Tablet screen
+  @media screen and (min-width: 481px) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.5)),
+      url('../images/hero/img_md-@1x.jpg');
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.5)),
+        url('../images/hero/img_md-@2x.jpg');
+    }
+  }
+
+  // Desktop screen
+  @media screen and (min-width: 769px) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.5)),
+      url('../images/hero/img_lg-@1x.jpg');
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.5)),
+        url('../images/hero/img_lg-@2x.jpg');
+    }
+  }
 
   &__title {
     margin-top: 0;
@@ -35,15 +66,10 @@
     }
   }
 
-  @media screen and (min-width: 768px) {
-    max-width: 768px;
-  }
-
   @media screen and (min-width: 1200px) {
     padding-bottom: 200px;
     padding-top: 200px;
     height: 600px;
-    max-width: 1600px;
 
     &__title {
       width: 696px;

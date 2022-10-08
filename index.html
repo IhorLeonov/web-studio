@@ -132,20 +132,22 @@
         ><div class="container">
           <h2 class="work__title">Чим ми займаємося</h2>
           <ul class="work__list list">
-            <li class="work__item"
-              ><img
+            <li class="work__item">
+              <img
                 class="work__img"
-                src="./images/img1.jpg"
+                srcset="./images/work/work1_lg-@1x.jpg 1x, ./images/work/work1_lg-@2x.jpg 2x"
+                src="./images/work/work1_lg-@1x.jpg"
                 alt="Программують за допомогю планшета та компьютера"
                 width="370"
                 height="294"
               />
-              <p class="work__desc">Десктопні додатки</p></li
-            >
+              <p class="work__desc">Десктопні додатки</p>
+            </li>
             <li class="work__item"
               ><img
                 class="work__img"
-                src="./images/img2.jpg"
+                srcset="./images/work/work2_lg-@1x.jpg 1x, ./images/work/work2_lg-@2x.jpg 2x"
+                src="./images/work/work2_lg-@1x.jpg"
                 alt="Ноутбук з мобильною версією сайту, у руках телефон"
                 width="370"
                 height="294"
@@ -154,7 +156,8 @@
             <li class="work__item"
               ><img
                 class="work__img"
-                src="./images/img3.jpg"
+                srcset="./images/work/work3_lg-@1x.jpg 1x, ./images/work/work3_lg-@2x.jpg 2x"
+                src="./images/work/work3_lg-@1x.jpg"
                 alt="Планшет у руках, на якому кольорова палітра"
                 width="370"
                 height="294"
@@ -169,10 +172,47 @@
           <h2 class="team__title">Наша команда</h2>
           <ul class="team__list list">
             <li class="team__item"
-              ><img
-                class="team__img"
-                src="./images/images-kommanda/img1.jpg"
-                alt="Ігор Дем'яненко" />
+              ><picture>
+                <!-- Desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team/img1_lg-@1x.webp 1x, ./images/team/img1_lg-@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team/img1_lg-@1x.jpg 1x, ./images/team/img1_lg-@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team/img1_md-@1x.webp 1x, ./images/team/img1_md-@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team/img1_md-@1x.jpg 1x, ./images/team/img1_md-@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <!-- Mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team/img1_sm-@1x.webp 1x, ./images/team/img1_sm-@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team/img1_sm-@1x.jpg 1x, ./images/team/img1_sm-@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <img
+                  class="team__img"
+                  src="./images/team/img1_sm-@1x.jpg"
+                  alt="Ігор Дем'яненко"
+                  loading="lazy"
+                />
+              </picture>
               <div class="team__box"
                 ><h3 class="team__name">Ігор Дем'яненко</h3
                 ><p class="team__desc" lang="en">Product Designer</p>
@@ -221,10 +261,48 @@
                   ></li> </ul></div
             ></li>
             <li class="team__item"
-              ><img
-                class="team__img"
-                src="./images/images-kommanda/img2.jpg"
-                alt="Ольга Рєпіна" /><div class="team__box"
+              ><picture>
+                <!-- Desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team/img2_lg-@1x.webp 1x, ./images/team/img2_lg-@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team/img2_lg-@1x.jpg 1x, ./images/team/img2_lg-@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team/img2_md-@1x.webp 1x, ./images/team/img2_md-@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team/img2_md-@1x.jpg 1x, ./images/team/img2_md-@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <!-- Mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team/img2_sm-@1x.webp 1x, ./images/team/img2_sm-@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team/img2_sm-@1x.jpg 1x, ./images/team/img2_sm-@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <img
+                  class="team__img"
+                  src="./images/team/img2_sm-@1x.jpg"
+                  alt="Ольга Рєпіна"
+                  loading="lazy"
+                />
+              </picture>
+              <div class="team__box"
                 ><h3 class="team__name">Ольга Рєпіна</h3
                 ><p class="team__desc" lang="en">Frontend Developer</p
                 ><ul class="socials__list">
@@ -271,11 +349,49 @@
                         <use href="./images/icons.svg#linkedin"></use></svg></a
                   ></li> </ul></div
             ></li>
-            <li class="team__item"
-              ><img
-                class="team__img"
-                src="./images/images-kommanda/img3.jpg"
-                alt="Микола Тарасов" /><div class="team__box"
+            <li class="team__item">
+              <picture>
+                <!-- Desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team/img3_lg-@1x.webp 1x, ./images/team/img3_lg-@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team/img3_lg-@1x.jpg 1x, ./images/team/img3_lg-@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team/img3_md-@1x.webp 1x, ./images/team/img3_md-@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team/img3_md-@1x.jpg 1x, ./images/team/img3_md-@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <!-- Mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team/img3_sm-@1x.webp 1x, ./images/team/img3_sm-@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team/img3_sm-@1x.jpg 1x, ./images/team/img3_sm-@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <img
+                  class="team__img"
+                  src="./images/team/img3_sm-@1x.jpg"
+                  alt="Микола Тарасов"
+                  loading="lazy"
+                />
+              </picture>
+              <div class="team__box"
                 ><h3 class="team__name">Микола Тарасов</h3
                 ><p class="team__desc" lang="en">Marketing</p
                 ><ul class="socials__list">
@@ -322,11 +438,49 @@
                         <use href="./images/icons.svg#linkedin"></use></svg></a
                   ></li> </ul></div
             ></li>
-            <li class="team__item"
-              ><img
-                class="team__img"
-                src="./images/images-kommanda/img4.jpg"
-                alt="Михайло Єрмаков" /><div class="team__box"
+            <li class="team__item">
+              <picture>
+                <!-- Desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team/img4_lg-@1x.webp 1x, ./images/team/img4_lg-@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team/img4_lg-@1x.jpg 1x, ./images/team/img4_lg-@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team/img4_md-@1x.webp 1x, ./images/team/img4_md-@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team/img4_md-@1x.jpg 1x, ./images/team/img4_md-@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <!-- Mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team/img4_sm-@1x.webp 1x, ./images/team/img4_sm-@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team/img4_sm-@1x.jpg 1x, ./images/team/img4_sm-@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <img
+                  class="team__img"
+                  src="./images/team/img3_sm-@1x.jpg"
+                  alt="Михайло Єрмаков"
+                  loading="lazy"
+                />
+              </picture>
+              <div class="team__box"
                 ><h3 class="team__name">Михайло Єрмаков</h3
                 ><p class="team__desc" lang="en">UI Designer</p
                 ><ul class="socials__list">

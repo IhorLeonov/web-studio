@@ -20,7 +20,7 @@
   transition: transform var(--main-animation);
 
   @media screen and (min-width: 1200px) {
-    width: 528px;
+    min-width: 528px;
     height: 581px;
   }
 }
