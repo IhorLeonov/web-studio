@@ -318,7 +318,7 @@ img {
   padding-bottom: 60px;
 }
 @media screen and (max-width: 767px) {
-  .benefits__item:not(:last-child) > .benefits__desc {
+  .benefits__item:not(:last-child) {
     margin-bottom: 30px;
   }
 }
@@ -949,7 +949,6 @@ img {
   display: -ms-flexbox;
   display: flex;
   margin-top: 64px;
-  margin-bottom: 48px;
 }
 
 .menu-socials__item {
